@@ -2,32 +2,43 @@
   "name": "template-npm",
   "version": "0.0.0",
   "description": "Template of npm package",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "build": "babel src -d dist",
+    "precommit":"echo \n"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/changlin-cn/template-npm.git"
+    "url": ""
   },
   "keywords": [
     "template"
   ],
-  "author": "changlin",
+  "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/changlin-cn/template-npm/issues"
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
   },
-  "homepage": "https://github.com/changlin-cn/template-npm#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.6",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
     "eslint": "^5.3.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jest": "^21.24.2",
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-standard": "^3.1.0"
+    "eslint-plugin-standard": "^3.1.0",
+    "husky": "^1.1.2",
+    "jest": "^23.6.0"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.26.0"
   }
 }
