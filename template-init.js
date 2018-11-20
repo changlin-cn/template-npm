@@ -19,7 +19,7 @@ const init = async function ({project,inquirer}) {
     Object.assign(setting, rest);
     setting.repository.url = repository;
 
-    fs.writeFile(path.resolve(__dirname, './package.json', JSON.stringify(setting, null, 2), function (err) {
+    fs.writeFile(path.resolve(__dirname, './package.json'), JSON.stringify(setting, null, 2), function (err) {
         if (err) {
             throw err
         }
