@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "build": "babel src -d dist",
-    "precommit":"echo \n"
+    "pb":"npm run test && npm run build && npm publish",
+    "precommit":"npm run test"
   },
   "repository": {
     "type": "git",
