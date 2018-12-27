@@ -8,7 +8,7 @@ module.exports = {
     globals: {},
     parser: 'babel-eslint',
     "extends": ["eslint:recommended"],
-    "plugins": ["jest"],
+    "plugins": ["jest","prettier"],
     "parserOptions": {
         "ecmaVersion": 2017,
         "sourceType": "module"
@@ -16,5 +16,6 @@ module.exports = {
     "rules": {
         'no-unused-vars': 1,
         'no-console': 1,
+        "prettier/prettier": "error"
     }
 }
