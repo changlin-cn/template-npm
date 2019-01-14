@@ -4,7 +4,7 @@
   "description": "Template of npm package",
   "main": "dist/index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "build": "babel src -d dist",
     "pb": "npm run test && npm run build && npm publish",
     "precommit": "npm run test && lint-staged"
